@@ -12,7 +12,7 @@ public class TransactionManagerMain {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-context.xml");
 
-		CustomerService customerService = ctx.getBean("customerManager", CustomerServiceImpl.class);
+		CustomerService customerService = ctx.getBean("customerService", CustomerServiceImpl.class);
 
 		Customer cust = createDummyCustomer();
 		customerService.createCustomer(cust);

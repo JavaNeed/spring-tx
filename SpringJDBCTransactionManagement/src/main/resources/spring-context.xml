@@ -31,7 +31,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<bean id="customerManager" class="com.journaldev.spring.jdbc.service.CustomerServiceImpl">
-		<property name="customerDAO" ref="customerDAO"></property>
+	<bean id="customerService" class="com.journaldev.spring.jdbc.service.CustomerServiceImpl">
+		<property name="customerDAO" ref="customerDAO" />
 	</bean>
 </beans>
