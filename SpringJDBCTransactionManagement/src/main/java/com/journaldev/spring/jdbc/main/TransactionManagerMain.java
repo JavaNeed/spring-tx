@@ -12,19 +12,21 @@ public class TransactionManagerMain {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-context.xml");
 
-		CustomerService customerManager = ctx.getBean("customerManager", CustomerServiceImpl.class);
+		CustomerService customerService = ctx.getBean("customerManager", CustomerServiceImpl.class);
 
 		Customer cust = createDummyCustomer();
-		customerManager.createCustomer(cust);
+		customerService.createCustomer(cust);
 
 		ctx.close();
 	}
 
 	private static Customer createDummyCustomer() {
+		// create Customer
 		Customer customer = new Customer();
 		customer.setId(2);
 		customer.setName("Pankaj");
 		
+		// create Address
 		Address address = new Address();
 		address.setId(2);
 		address.setCountry("India");
@@ -35,5 +37,4 @@ public class TransactionManagerMain {
 		
 		return customer;
 	}
-
 }

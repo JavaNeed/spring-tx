@@ -1,6 +1,20 @@
 SpringJDBCTransactionManagement
 -------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 Some of the benefits of using Spring Transaction Management are:
+--------------------------------------------------------------------
 1. Support for Declarative Transaction Management. In this model, Spring uses AOP over the transactional methods to provide data integrity. This is the preferred approach and works in most of the cases.
 2. Support for most of the transaction APIs such as JDBC, Hibernate, JPA, JDO, JTA etc. All we need to do is use proper transaction manager implementation class. For example `org.springframework.jdbc.datasource.DriverManagerDataSource` for JDBC transaction management and `org.springframework.orm.hibernate3.HibernateTransactionManager` if we are using Hibernate as ORM tool.
 3. Support for programmatic transaction management by using `TransactionTemplate` or `PlatformTransactionManager` implementation.
